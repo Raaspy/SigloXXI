@@ -1,0 +1,141 @@
+﻿<Window x:Class="CapaPresentacion.Finanzas.VentanaMontoTotal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacion.Finanzas"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d"
+        Title="VentanaMontoTotal" Height="700" Width="1200" WindowStyle="None"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="Transparent" AllowsTransparency="True" Activated="Window_Activated">
+    <Border CornerRadius="10" Background="Transparent">
+
+        <Grid Margin="5 2 5 2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+                <RowDefinition Height="65"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+
+            
+            <Border
+                CornerRadius="10"
+                BorderBrush="#48A999"
+                Grid.Column="3"
+                Grid.Row="3"
+                BorderThickness="3"
+                Background="#E0F2F1"
+                Height="300"
+                Width="291.25"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right">
+
+                <Grid Margin="5 2 5 2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="25"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button x:Name="btnCerrarVen"
+                        BorderThickness="0"
+                        Content="x"
+                        Foreground="Black"
+                        FontSize="16"
+                        Cursor="Hand"
+                        Grid.Column="3"
+                        Click="btnCerrarVen_Click">
+
+                        <!--Invocamos la forma de estilo para cuando pasa por el botón-->
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#e0f2f1"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#B5DEDA" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <!--Desactivamos el color de fondo predeterminado que tiene XAML-->
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="20" Height="20"
+                                        CornerRadius="8"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"/>
+
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <!--Panel de Opciones-->
+                    <Border Grid.Column="1" Grid.Row="1"
+                        CornerRadius="20"
+                        BorderBrush="#C8C8C8"
+                        BorderThickness="1.5">
+
+                        <StackPanel>
+                            <TextBlock
+                                Width="221.25"
+                                Height="50"
+                                VerticalAlignment="Top"
+                                Margin="0 50 0 0"
+                                FontWeight="ExtraLight"
+                                FontFamily="Montserrat"
+                                FontStyle="Normal" 
+                                FontSize="20"
+                                TextWrapping="Wrap"
+                                Text="El monto total registrado en el sistema es:">
+                            </TextBlock>
+
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
+                                <Label
+                                    VerticalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Grid.Row="1" Grid.Column="1"
+                                    FontWeight="ExtraLight"
+                                    FontFamily="Montserrat"
+                                    FontStyle="Normal" 
+                                    FontSize="28"
+                                    Content="$">
+                                </Label>
+                                <Label
+                                    x:Name="lbMontoTotalCaja"
+                                    VerticalAlignment="Center"
+                                    HorizontalContentAlignment="Center"
+                                    Grid.Row="1" Grid.Column="1"
+                                    FontWeight="ExtraLight"
+                                    FontFamily="Montserrat"
+                                    FontStyle="Normal" 
+                                    FontSize="28"
+                                    Content="0">
+                                </Label>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
