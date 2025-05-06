@@ -8,6 +8,7 @@ Este proyecto es un sistema interno diseñado para la gestión integral de un **
 - [✨ Características](#-características)
 - [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
 - [🚀 Instalación](#-instalación)
+- [📸 Imágenes del Proyecto](#-imágenes-del-proyecto)
 
 ---
 
@@ -54,5 +55,14 @@ Este proyecto fue desarrollado utilizando:
 
 ---
 
+## 📸 Imágenes del Proyecto
+
+**A continuación, se muestran capturas de pantalla que ilustran la interfaz del programa creado.**
+
+![Login de Usuario](Images/Login.png)
+![Menú de Administrador](Images/Menu-Admin.png)
+![Menú de Bodega](Images/Menu-Bodega.png)
+![Menú de Cocina](Images/Menu-Cocina.png)
+![Menú de Finanzas](Images/Menu-Finanzas.png)
 
 
